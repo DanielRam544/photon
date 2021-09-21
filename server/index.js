@@ -16,6 +16,7 @@ app.use(cors()); //Permite la comunicación desde fuera del servidor
 
 //Rutas del servidor
 app.use('/api/reservas',require('./routes/Reservas.routes'));
+app.use('/api/tickets',require('./routes/Tickets.routes'));
 
 //Iniciar servidor
 app.listen(app.get('port'), ()=>{

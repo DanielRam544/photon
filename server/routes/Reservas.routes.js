@@ -9,7 +9,7 @@ router.get('/', reservas.getReservas);
 //Crear una reserva
 router.post('/', reservas.createReserva);
 //obtener una reserva
-router.get('./:id', reservas.getReserva);
+router.get('/:id', reservas.getReserva);
 //actualizar un empleado
 router.put('/:id', reservas.updateReservas);
 //Eliminar una reserva
