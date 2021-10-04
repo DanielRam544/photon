@@ -1,34 +1,32 @@
 const { response } = require("express");
 const Tickets = require('../models/Tickets');
-const ticketsController = {
-
-};
+const ticketsController = { };
 
 // Optener todas los tickets 
-ticketsController.getTickets = async (req, res) =>{
-    const reservas = await Tickets.find();
+ticketsController.getTickets = async  (req, res) =>{
+    const tickets = await Tickets.find();
     res.json(tickets);
 }
 
 //crear una reserva 
 ticketsController.createTickets = async (req, res) =>{
-    // console.log(req.body);
-    // res.json("Recibido");
-    const tickets = new Tickets({
-        numero: req.body.numero,
-        folio: req.body.folio,
-        fechaT: req.body.fechaT,
-        centro: req.body.centro,
-        tipo: req.body.tipo,
-        incidencias: req.body.incidencias,
-        usuariosT: req.body.usuariosT,
-        estatus: req.body.estatus,
-        descripcionT: req.body.descripcionT
-    });
-    await tickets.save();
-    res.json({
-        'status': 'ticket guardado'
-    });
+     console.log(req.body);
+     res.json("Recibido");
+    // const tickets = new Tickets({
+    //     numero: req.body.numero,
+    //     folio: req.body.folio,
+    //     fechaT: req.body.fechaT,
+    //     centro: req.body.centro,
+    //     tipo: req.body.tipo,
+    //     incidencias: req.body.incidencias,
+    //     usuariosT: req.body.usuariosT,
+    //     estatus: req.body.estatus,
+    //     descripcionT: req.body.descripcionT
+    // });
+    // await tickets.save();
+    // res.json({
+    //     'status': 'ticket guardado'
+    // });
 }
 
 //Actualizar Reservas

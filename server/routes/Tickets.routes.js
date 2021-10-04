@@ -1,30 +1,23 @@
 const express = require('express');
 const router = express.Router();
 
+// router.get('/',(req, res)=>{
+//     res.send('Hola tickets');
+// });
+
 const tickets = require('../controllers/tickets.controller');
 
 //Definimos la ruta principal de la tabla usuarios
-
-// router.get('/', reservas.getReservas);
-// //Crear una reserva
-// router.post('/', reservas.createReserva);
-// //obtener una reserva
-// router.get('/:id', reservas.getReserva);
-// //actualizar un empleado
-// router.put('/:id', reservas.updateReservas);
-// //Eliminar una reserva
-// router.delete('/:id',reservas.delateReservas);
-
 router.get('/', tickets.getTickets);
-//Crear una reserva
+//Crear una ticket
 router.post('/', tickets.createTickets);
-//obtener una reserva
+//obtener una ticket
 router.get('/:id', tickets.getTicket);
-//actualizar un empleado
+//actualizar un ticket
 router.put('/:id', tickets.updateTickets);
-//Eliminar una reserva
+//Eliminar una ticket
 router.delete('/:id',tickets.delateTickets);
 
 
 
-module.exports = router;
+ module.exports = router;

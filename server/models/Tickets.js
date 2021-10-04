@@ -12,7 +12,7 @@ const TicketsSchema = new Schema({
         require: true
     },
     fechaT: {
-        type: Date,
+        type: String,
         require: true
     },
     centro: {
